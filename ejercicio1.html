@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        // Variable que indicará el número de elementos a imprimir
+        let numeroDeElementos = 10; // El profesor manipulará este valor
+
+        // Función para generar la serie de Fibonacci
+        function generarSerieFibonacci(n) {
+            let serie = [];
+            for (let i = 0; i < n; i++) {
+                if (i === 0) {
+                    serie.push(0);
+                } else if (i === 1) {
+                    serie.push(1);
+                } else {
+                    serie.push(serie[i - 1] + serie[i - 2]);
+                }
+            }
+            return serie;
+        }
+
+        // Generar e imprimir la serie en la consola
+        let serieFibonacci = generarSerieFibonacci(numeroDeElementos);
+        console.log(`Serie Fibonacci con ${numeroDeElementos} elementos:`, serieFibonacci);
+    </script>
+</body>
+</html>
