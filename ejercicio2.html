@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        // Arreglo de prueba
+        let inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+
+        // Filtrar solo los números del arreglo
+        let numeros = inicio.filter(item => typeof item === 'number');
+
+        // Implementación del algoritmo de ordenación (Bubble Sort)
+        function bubbleSort(arr) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        // Intercambiar los elementos
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        // Ordenar los números
+        let numerosOrdenados = bubbleSort(numeros);
+
+        // Imprimir el resultado en consola
+        console.log("Números ordenados:", numerosOrdenados);
+    </script>
+</body>
+</html>
